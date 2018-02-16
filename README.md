@@ -1,4 +1,4 @@
-# tabletop
+# Tabletop
 A site to aid tabletop games
 
 
