@@ -1,0 +1,87 @@
+extends ../layout
+
+block content
+    h1 Welcome to a customisable gurps Character sheet
+    section(id="meta-stats")
+        label Point Total
+        input(type="number")#points
+        label Disadvantage Buy Back(as a %)
+        input(type="number" min="0" max="100")#buyback
+        label Character Name
+        input(type="text")
+        button(id="save") Save
+        span#pointTotal
+    h1 Stats
+    section(id="stats")
+        label ST
+        input(type="number" value="10" name="st")
+        span
+        label DX
+        input(type="number" value="10" name="dx")
+        span
+        label IQ
+        input(type="number" value="10" name="iq")
+        span
+        label HT
+        input(type="number" value="10" name="ht")
+        span
+        label Height  
+        select(name="height" )  
+            option(value='0') Very short
+            option(value='0') Short
+            option(selected)(value='0') Normal
+            option(value='0') Tall
+            option(value='0') Very tall
+        label Weight
+        select(name="height")  
+            option(value='-5') Thin
+            option(value='0')(selected) Normal
+            option(value='-1') Overweight
+            option(value='-3') Obese
+            option(value='-5') Morbidly obese
+        label Age
+        input(type="number" value="24")
+        label Size Mod
+        input(type="number" value="0")
+        
+    h1 Advantages
+    button(id="new_adv") Add Another Advantage
+    section(id="advantages")
+        div(class="adv")
+            label Advantage Name
+            input(type="text" class="adv_name")
+            label  Advantage points (Per Level)
+            input(type="number" class="adv_points collect")
+            label  Advantage level
+            input(type="number" class="adv_level")
+            label Advantage description
+            textarea(rows="4" cols="35")
+    h1 Disadvantages
+    button(id="new_dis_adv") Add Another Disadvantage
+    section(id="disadvantages")
+        div(class="dis_adv")
+            label Disadvantage Name
+            input(type="text" class="d_adv_name")
+            label Disadvantage points 
+            input(type="number" class="d_adv_points collect")
+            label  Disadvantage level
+            input(type="number" class="d_adv_level")
+            label Disadvantage description
+            textarea(rows="4" cols="35")
+    h1 Skills
+    button(id="new_skl") Add Another Skill
+    section(id="skills")
+        div(class="skill")
+            label Skill Name
+            input(type="text" class="skl_name")
+            label Skill Level 
+            input(type="number" class="skl_lvl collect")
+            label Skill Difficulty 
+            select(name="level" )  
+                option(value='0' selected) Easy
+                option(value='-1') Average
+                option(value='-2') Hard
+                option(value='-3') Very Hard
+                option(value='-4') Very Very hard
+    script(src="/javascripts/sheet.js")
+    link(rel='stylesheet', href='/stylesheets/sheets.css')

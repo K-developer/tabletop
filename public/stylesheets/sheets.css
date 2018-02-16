@@ -1,0 +1,58 @@
+#meta-stats {
+  width: 540px;
+  margin-bottom: 30px;
+}
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 920px;
+}
+#stats {
+  width: 230px;
+}
+#stats>div>labels {
+  display: inline-block;
+}
+#advantages,
+#disadvantages,
+#skills {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.adv,
+.dis_adv,
+.skill {
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+  width: 40%;
+  margin: 5px;
+  flex-grow: 1;
+}
+article {
+  display: block;
+}
+label {
+  margin-top: 10px;
+  display: inline-block;
+}
+h1 {
+  display: inline-block;
+}
+button {
+  float: right;
+}
+label {
+  margin-top: 10px;
+  font-size: 12pt;
+  display: block;
+}
+input {
+  clear: both;
+}
+select textarea {
+  display: block;
+}

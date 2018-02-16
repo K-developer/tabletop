@@ -1,0 +1,27 @@
+#mainPageButtons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: auto;
+  min-height: 400px;
+}
+#mainPageButtons>button {
+  height: 300px;
+  width: 50%;
+  margin: auto;
+  color: #fff;
+  background-color: #d68f4f;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px #70311c;
+}
+#mainPageButtons>button:hover {
+  box-shadow: inset 0 0 0 1px #27496d, 0 5px 15px #70311c;
+}
+#mainPageButtons>button:active {
+  background-color: #964024;
+  box-shadow: 0 5px #70311c;
+  transform: translateY(5px);
+}

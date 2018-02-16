@@ -1,0 +1,197 @@
+body {
+  font: 62.5%/1.5 Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+  text-align: center;
+  background: #70311c;
+}
+#wrapper {
+  width: 920px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  padding: 20px;
+  border-bottom-radius: 15px;
+  box-shadow: 0 5px #70311c;
+}
+#navigation {
+  width: 940px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e8ba67;
+}
+#navigation>a {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  background-color: none;
+}
+#navigation>a:hover {
+  color: #000;
+  transition: color 1s ease;
+}
+#sheets_button {
+  position: relative;
+}
+#sheets_dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 7%;
+  z-index: 20;
+  position: fixed;
+  background-color: #e8ba67;
+  left: 53%;
+}
+#mainPageButtons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: auto;
+  min-height: 400px;
+}
+#mainPageButtons>button {
+  height: 300px;
+  width: 50%;
+  margin: auto;
+  color: #fff;
+  background-color: #d68f4f;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px #70311c;
+}
+#mainPageButtons>button:hover {
+  box-shadow: inset 0 0 0 1px #27496d, 0 5px 15px #70311c;
+}
+#mainPageButtons>button:active {
+  background-color: #964024;
+  box-shadow: 0 5px #70311c;
+  transform: translateY(5px);
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+#login {
+  position: relative;
+  left: 220px;
+  bottom: 6px;
+  border: 1px solid #fff;
+  padding: 3px 7px 3px;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#profile {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 4;
+  cursor: pointer;
+}
+#loggedInBody>input {
+  background-color: #e8ba67;
+  box-shadow: inset 1px 1px #707070;
+  border-radius: 5px;
+  outline: none;
+}
+#loggedIn {
+  position: relative;
+  left: 220px;
+  bottom: 6px;
+  border: 1px solid #fff;
+  padding: 3px 7px 3px;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#loggedInBody>input {
+  background-color: #e8ba67;
+  box-shadow: inset 1px 1px #707070;
+  border-radius: 5px;
+  outline: none;
+}
+#changeGame {
+  position: relative;
+  right: 220px;
+  bottom: 6px;
+  border: 1px solid #fff;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#changeGame:hover {
+  transition: background-color 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  background-color: #ffd07f;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+#login:hover {
+  transition: background-color 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  background-color: #ffd07f;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+#loggedIn:hover {
+  transition: background-color 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  background-color: #ffd07f;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+#register_login_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: 40%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+#profile>section {
+  display: flex;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: 40%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+#profile>section {
+  display: flex;
+  flex-direction: column;
+}
+.login,
+.register {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+}
+.hide {
+  overflow: hidden;
+  max-height: 0px;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.show {
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  overflow: hidden;
+  max-height: 100%;
+}
