@@ -42,7 +42,7 @@ app.set('port_https', 3443);
 
 MongoClient.connect("mongodb://localhost:27017/gurps", {native_parser:true}, function(err, database) {
     if(err) return console.error(err);
-    global.db = database;
+    global.db = database.db("gurps");
     console.log("connected to "+db.s.databaseName);
   });
 
