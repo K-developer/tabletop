@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    section#container
+        p 
+            This is an online christmas meal assistant Where you can 
+            add and remove items from your meals
+        button#save Save
+        section#christmas_eve
+            h1 Christmas Eve
+            button.add_section#eve Add Meal
+            article#eve_meals
+        section#christmas_day
+            h1 Christmas Day
+            button.add_section#xmas Add Meal
+            article#xmas_meals
+        section#boxing_day
+            h1 Boxing Day
+            button.add_section#boxing Add Meal
+            article#boxing_meals
+            
+           
+
+
+
+    script(src='/javascripts/index.js')
+    link(rel='stylesheet', href='/stylesheets/index.css')

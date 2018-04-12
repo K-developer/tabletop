@@ -1,0 +1,63 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/lib.js')
+    script(src='/javascripts/main.js')
+    script(src='/service_worker.js')
+  body
+    header#sheets
+        nav(id="navigation")         
+            a(href='#' id='changeGame' style='padding: 3px 7px 3px') Change Game
+                span#gameName
+            a(href="/") Home
+            a(href="/game/roller") Game
+            a#sheets_button(href="/sheets") Sheets
+            div#sheets_dropdown.hide
+                a(href='/sheets/gurps') Gurps Sheet
+                a(href='/sheets/dnd' style='padding: 3px 7px 3px') D&amp;D Sheet
+            a(href="/show") Show
+            a(href="#" id="login" style='padding: 3px 7px 3px') Login
+        nav(id="game_sub_navigation")
+            a(href="/") Home
+            a(href="/game") Game
+            a(href="/game/roller") Dice Roller
+            a(href="/game/monstrous_manual") Monstrous Manual
+            a(href="/game/calc") Point Buy Calculator
+
+    div#loginBody.hide.overlay
+        section#register_login_container
+            section.register
+                span Register
+                input(id="RegiName" type="text" placeholder="username")
+                input(id="RegiPass" type="password" placeholder="password")
+                input(id="RegiEmail" type="email" placeholder="email address")
+                input(id="RegiGm" type="checkbox" value="GM")
+                span Tick for a Dm account
+                button(id="RegiSub") Register
+
+            section.login
+                span Login
+                input(id="LoginName" type="text" placeholder="Username or email")
+                input(id="LoginPass" type="password" placeholder="Password")
+                button(id="LoginSub") Login
+
+    div#profile.hide
+        section
+            div
+                span.name name: 
+                span.nameValue
+            div
+                span.role role: 
+                span.roleValue
+
+    div.overlay.hide
+        div#mainPageButtons
+            button#dnd D&amp;D
+            button#gurps Gurps
+    section#wrapper
+        block content            
+    script(src='/javascripts/login.js')
+

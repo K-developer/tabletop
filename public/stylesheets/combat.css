@@ -1,0 +1,46 @@
+h1.name{
+    font-size: 16pt;
+
+}
+#playmat{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#playmat>input{
+    float: left;
+    display: flex; 
+    justify-content: space-between;
+}
+
+#playmat>span{
+    display: block;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.monsterCard{
+    border: 1px solid black;
+    width: 240px;
+
+}
+
+
+.collapse_button{
+    position:relative;
+    bottom:98px;
+    left:174px;
+}
+
+.monsterCardCollapsed{
+    max-height: 90px;
+    overflow: hidden;
+
+}
+
+
+.pageNumber{
+    cursor: pointer;
+}
+

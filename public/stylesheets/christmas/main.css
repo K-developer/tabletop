@@ -1,0 +1,119 @@
+body {
+  font: 62.5%/1.5;
+  text-align: center;
+  background: #1c702c;
+  font-family: 'Mountains of Christmas', cursive;
+}
+input {
+  display: block;
+  width: 75%;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #f00;
+}
+#wrapper {
+  width: 920px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  padding: 20px;
+  border-bottom-radius: 15px;
+  box-shadow: 0 5px #70311c;
+}
+#navigation {
+  width: 940px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #dd2323;
+}
+#navigation>a {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  background-color: none;
+}
+#navigation>a:hover {
+  color: #000;
+  transition: color 1s ease;
+}
+.hide {
+  overflow: hidden;
+  max-height: 0;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.show {
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  max-height: 1000px;
+  overflow: hidden;
+}
+@media (max-device-width: 450px) and (orientation: portrait) {
+  body {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  button {
+    width: 170px;
+    height: 40px;
+  }
+  header {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+  h2 {
+    font-size: 26pt;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    font-family: 'Mountains of Christmas', cursive;
+  }
+  #navigation {
+    width: 100%;
+  }
+  #wrapper {
+    width: 98%;
+    min-height: 50%;
+  }
+}
+@media (max-device-width: 750px) and (orientation: landscape) {
+  body {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  header {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+  button {
+    width: 170px;
+    height: 40px;
+  }
+  h2 {
+    font-size: 26pt;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    font-family: 'Mountains of Christmas', cursive;
+  }
+  #navigation {
+    width: 100%;
+  }
+  #wrapper {
+    width: 98%;
+    height: auto;
+  }
+}
