@@ -11,11 +11,6 @@ router.get('/show', function(req, res, next) {
     res.render('show', { title: 'Show' });    
 });
 
-router.get('/roller', function(req, res, next) {
-    res.render('roller', { title: 'Roller' });    
-});
-
-
 router.get('/calc', function(req, res, next) {
     res.render('calc', { title: 'PointBuy Calculator' });    
 });

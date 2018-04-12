@@ -21,8 +21,9 @@ var options = {
 var secureServer = https.createServer(options, app).listen(httpsPort);
 
 var index = require('./routes/index');
-var users = require('./routes/users');
 var sheets = require('./routes/sheets');
+var games = require('./routes/games');
+
 
 var app = express();
 
@@ -32,13 +33,6 @@ app.set('view engine', 'jade');
 app.set('port', 80);
 app.set('port_https', 3443);
 
-// Connect to Mongo
-// MongoClient.connect("mongodb://localhost:27017/gurps", function(err, database) {
-//   if(err) return console.error(err);
-    
-//     global.db = database;
-//     console.log("connected to "+db.s.databaseName);
-//   });
 
 MongoClient.connect("mongodb://localhost:27017/gurps", {native_parser:true}, function(err, database) {
     if(err) return console.error(err);
@@ -58,6 +52,7 @@ app.use(express.static(path.join(__dirname, 'public'), {dotfiles: 'allow'} ));
 
 app.use('/', index);
 app.use('/sheets', sheets);
+app.use('/game', games);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

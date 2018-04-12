@@ -7,14 +7,13 @@ html
     script(src='/javascripts/lib.js')
     script(src='/javascripts/main.js')
     script(src='/service_worker.js')
-    script(src="/javascripts/react.js" type="text/jsx")
   body
     header
         nav(id="navigation")         
             a(href='#' id='changeGame' style='padding: 3px 7px 3px') Change Game
                 span#gameName
             a(href="/") Home
-            a(href="/roller") Roller
+            a(href="/game/roller") Game
             a(href="/sheets")#sheets_button Sheets
             div#sheets_dropdown.hide
                 a(href='/sheets/gurps') Gurps Sheet
