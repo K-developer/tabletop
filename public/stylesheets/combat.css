@@ -44,3 +44,13 @@ h1.name{
     cursor: pointer;
 }
 
+.encounterDropBox{
+    position: absolute;
+    top: 40%;
+    right: 5px;
+    height: 100px;
+    width: 140px;
+    border: 1px solid black;
+    z-index: 20;
+}
+

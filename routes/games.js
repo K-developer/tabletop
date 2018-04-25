@@ -16,7 +16,8 @@ router.get('/monstrous_manual', function(req, res, next) {
 
 router.post('/bestiary', function(req, res, next) {
     let data = req.body;
-    db.collection("monsters").find({}, {fields:{"_id":0, guid: 0, fid: 0}}).sort({name:1}).toArray(function(err, resp){
+    db.collection("bestiary").find({"license": {$exists: false}}, {"_id": 0}).sort({name:1}).toArray(function(err, resp){
+        console.log(resp);
             res.send(resp);
     });
 });
