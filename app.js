@@ -7,18 +7,18 @@ var bodyParser = require('body-parser');
 var stylus = require('stylus');
 var MongoClient = require('mongodb').MongoClient;
 var utils = require("util");
-var https = require("https");
+var http = require("http");
 var fs = require("fs");
 
-var httpsPort = 3443;
+var httpsPort = 8080;
 
-var options = {
+/*var options = {
   key: fs.readFileSync('/etc/letsencrypt/live/k-developer.com/privkey.pem'),
   cert: fs.readFileSync('/etc/letsencrypt/live/k-developer.com/cert.pem')
 };
+*/
 
-
-var secureServer = https.createServer(options, app).listen(httpsPort);
+//var secureServer = http.createServer(app).listen(httpsPort);
 
 var index = require('./routes/index');
 var sheets = require('./routes/sheets');
@@ -26,6 +26,9 @@ var games = require('./routes/games');
 
 
 var app = express();
+
+var server = http.createServer(app);
+server.listen(httpsPort);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -72,5 +75,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app
-;
+module.exports = app;
